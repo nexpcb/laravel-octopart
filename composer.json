@@ -1,0 +1,34 @@
+{
+    "name": "nexpcb/laravel-octopart",
+    "description": "Laravel octopart package uses phpoctopart.",
+    "keywords": ["octopart", "laravel"],
+    "license": "MIT",
+    "homepage": "https://www.nexpcb.com",
+    "support": {
+        "homepage": "https://github.com/nexpcb/laravel-phpoctopart/issues",
+        "source": "https://github.com/nexpcb/laravel-phpoctopart"
+    },
+    "authors": [
+        {
+            "name": "Bala Wang",
+            "email": "bala@nexpcb.com"
+        }
+    ],
+    "require": {
+        "nexpcb/phpoctopart": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "NexPCB\\LaravelOctopart\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NexPCB\\LaravelOctopart\\LaravelOctopartServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
