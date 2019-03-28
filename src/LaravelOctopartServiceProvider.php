@@ -3,7 +3,6 @@
 namespace NexPCB\LaravelOctopart;
 
 use Illuminate\Support\ServiceProvider;
-use NexPCB\PHPOctopart\OctopartClient;
 
 class LaravelOctopartServiceProvider extends ServiceProvider
 {
@@ -15,8 +14,9 @@ class LaravelOctopartServiceProvider extends ServiceProvider
     public function register()
     {
         // Bind the Octopart wrapper class
-        $this->app->bind('NexPCB\LaravelOctopart\Octopart', function ($app) {
-            return OctopartClient::create(['apikey' => env('OCTOPART_API_KEY', config('octopart.apikey'))]);
+        $this->app->bind('NexPCB\LaravelOctopart\LaravelOctopart', function ($app) {
+            $config = ['apikey' => env('OCTOPART_API_KEY', config('octopart.apikey'))];
+            return LaravelOctopart::create($config);
         });
     }
 

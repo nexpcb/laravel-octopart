@@ -12,6 +12,6 @@ class Octopart extends Facade
 
     protected static function getFacadeAccessor()
     {
-        return 'NexPCB\LaravelOctopart\Octopart';
+        return 'NexPCB\LaravelOctopart\LaravelOctopart';
     }
 }
